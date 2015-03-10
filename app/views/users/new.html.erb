@@ -1,30 +1,75 @@
-<div>
-    <p class="large brandon">Test Screener is coming</p>
-    <p class="small brandon">Online Audience Feedback Screenings for Film, TV, &amp; Video</p>
-    <p>Get into more film festivals, and get more views on:</p>
-    <div>
-        <ul class="inline-list">
-          <li><%= image_tag("logos/itunes.png", class: "brand-logo") %></li>
-          <li><%= image_tag("logos/youtube.png", class: "brand-logo") %></li>
-          <li><%= image_tag("logos/vimeo.png", class: "brand-logo") %></li>      
-          <li><%= image_tag("logos/netflix.png", class: "brand-logo") %></li>
-          <li><%= image_tag("logos/hulu.png", class: "brand-logo") %></li>
-        </ul>
-    </div> 
+<div class="hero">
+    <div class="container">
+        <h1 class="large">Test Screener is coming</h1>
+        <p class="small">Online Audience Feedback Screenings for Film, TV, &amp; Video</p>
+    </div>
 </div>
 
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+<div class="container">
+    <div class="row creator-container">
+        <div class="six columns left">
+            <h2>Creators</h2>
+            <p class="description">Test screen your film or video with your target audience, and get the feedback you need to improve the quality of your content. You'll get into more film festivals, and get more views on your favorite platforms.</p>
+        </div>
+        <div class="six columns">
+            <p class="small-caps">Get More Views On:</p>
+            <table>
+                <tr>
+                    <td><%= image_tag("logos/itunes.png", class: "brand-logo") %></td>
+                    <td><%= image_tag("logos/youtube.png", class: "brand-logo") %></td>
+                    <td><%= image_tag("logos/vimeo.png", class: "brand-logo") %></td>
+                </tr>
+                <tr>
+                    <td><%= image_tag("logos/netflix.png", class: "brand-logo") %></td>
+                    <td><%= image_tag("logos/hulu.png", class: "brand-logo") %></td>
+                    <td><%= image_tag("logos/amazon.png", class: "brand-logo") %></td>
+                </tr>                
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="row viewer-container">
+        <div class="six columns center">
+            <table>
+                <tr>
+                    <td><i class="fa fa-desktop fa-4x"></i></td>
+                    <td><i class="fa fa-arrow-right fa-1x"></i></td>
+                    <td><i class="fa fa-pencil fa-4x"></i></td>
+                    <td><i class="fa fa-arrow-right fa-1x"></i></td>
+                    <td><i class="fa fa-usd fa-4x"></i></td>
+                </tr>
+                <tr>
+                    <td><p class="small-caps">WATCH</p></td>
+                    <td></td>
+                    <td><p class="small-caps">REVIEW</p></td>
+                    <td></td>
+                    <td><p class="small-caps">GET PAID</p></td>
+                </tr>                
+            </table>
+        </div>
+        <div class="six columns left">
+            <h2>Viewers</h2>
+            <p class="description">Watch a film or video, then fill out a brief questionnaire. You'll be paid 10&cent; per minute reviewed. So if you watch a 90 minute film, you'll receive &#36;9.</p>
+        </div>        
+    </div>
+</div>
+
+<div class="form-wrap clearfix email-container<%= "ended" if Rails.application.config.ended %>">
     <% if Rails.application.config.ended %>
         <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
         <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
         <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
         <p class="again brandon">Thank You Again!</p>
     <% else %>
-        <div class="key"></div>
+        <i class="fa fa-ticket fa-3x"></i>
         <p class="byline brandon">Your free screening awaits...</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
         <% end %>
     <% end %>
+</div>
+
+<div class="footer">
+    <p>Contact</p>
 </div>
