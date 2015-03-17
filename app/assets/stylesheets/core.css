@@ -31,6 +31,10 @@ body{
 	padding-bottom: 20px;
 }
 
+.products{
+	list-style-type: none;
+}
+
 .small-caps{
 	text-transform: uppercase;
 	font-weight: 100;
@@ -61,6 +65,9 @@ body{
 .center{
 	text-align: center;
 }
+.center-margin{
+	margin:0 auto;
+}
 
 .bold{
 	font-weight: bold;
@@ -72,6 +79,11 @@ body{
 
 table{
 	margin-top: 10px;
+}
+
+.subtitle-container{
+	width: 350px;
+	margin:0 auto;
 }
 
 .brand-logo{
@@ -144,7 +156,7 @@ html.home{
   position: relative;	
 }
 
-#home .hero .large{
+.large{
 	font-weight: bold;
 	font-size: 60px;
 	color: white;
@@ -156,7 +168,18 @@ html.home{
 	padding-top: 100px;	
 }
 
-#home .hero .small{
+.refer-large{
+	font-weight: bold;
+	font-size: 40px;
+	color: white;
+	text-transform: uppercase;
+	/*margin: 85px 0 0 136px;*/
+	position: relative;
+	z-index: 2;
+	letter-spacing: 1px;
+}
+
+.small{
 	font-weight: bold;
 	color: #FAED6A;
 	font-size: 22px;
@@ -354,7 +377,6 @@ html.home{
 	width: 100%;
 	overflow:hidden;
 	z-index: 1;
-	position: relative;
 }
 
 #refer .header .content{
@@ -363,34 +385,42 @@ html.home{
 }
 
 #refer .header p{
-	float: left;
 	color: #FFF;
 	font-weight: 500;
 	text-transform: uppercase;
 	line-height: 50px;
 }
 
-#refer .header .byline{
-	font-size: 14px;
-}
-
 #refer .header .logo{
-	font-weight: normal;
+/*	font-weight: normal;
 	font-size: 0;
 	line-height: 0;
 	margin-right: 14px;
-	letter-spacing: 1px;
-	background: url(/assets/refer/logo.png) 0 0 no-repeat;
-	background-size: 106px 19px;
+	letter-spacing: 1px;*/
+	/*background: url(/assets/refer/logo.png) 0 0 no-repeat;*/
+/*	background-size: 106px 19px;
 	height: 19px;
 	width: 106px;
 	margin-top: 15px;
-}
+*/}
 
 #refer .hero{
 	background: #F1F0EE;
-	height: 391px;
+	height: 450px;
 	overflow: hidden;
+	background: url(/assets/home/seats2.jpg) center center no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.thank-you{
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+.dont-leave-friends{
+	margin-top: 40px;
+	margin-bottom: 10px;
 }
 
 #refer .mammoth{
@@ -417,12 +447,13 @@ html.home{
 }
 
 #refer .share-wrap{
-	float: right;
+	/*float: right;*/
 	width: 400px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .13em;
-	margin-right: 60px;
+	/*margin-right: 60px;*/
+	margin:0 auto;
 }
 
 #refer .share-wrap .why{
@@ -442,43 +473,53 @@ html.home{
 	letter-spacing: .13em;
 }
 
-#refer .share-wrap .subtitle{
-	color: #565656;
-	font-size: 14px;
+.subtitle{
+	color: white;
+	font-size: 16px;
 	text-transform: none;
 	margin-top: 15px;
 }
 
-#refer .share-wrap .copy-link{
+.copy-link{
 	border: 1px solid #D1D0C7;
 	background: #FFF;
-	padding: 10px 0;
-	width: 320px;
+	padding: 5px 10px;
+	width: 350px;
 	text-transform: none;
-	font-size: 11px;
+	font-size: 14px;
 	margin: 20px auto 0;
 }
 
-#refer .share-wrap .social-links{
+#facebook-link{
+	position:relative;
+	right:10px;
+}
+
+#twitter-link{
+	position:relative;
+	left:10px;
+}
+
+.social-links{
 	width: 120px;
 	height: 37px;
 	margin: 25px auto 0;
 	text-align: center;
 }
 
-#refer .share-wrap .social-links a, #refer .share-wrap .social-links div{
+.social-links a, #refer .share-wrap .social-links div{
 	display: inline-block;
 }
 
-#refer .share-wrap .social-links .fb{
-	background: url(/assets/refer/fb.png);
+.social-links .fb{
+	background: url(/assets/refer/facebook.png);
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
 }
 
-#refer .share-wrap .social-links .twit{
-	background: url(/assets/refer/twit.png);
+.social-links .twit{
+	background: url(/assets/refer/twitter.png);
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;

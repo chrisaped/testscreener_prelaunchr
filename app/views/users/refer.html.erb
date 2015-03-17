@@ -1,27 +1,32 @@
 <div class="header">
-    <div class="content">
-        <p class="logo brandon">Harry&#8217;s</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
+    <div class="container center">
+        <p class="thank-you">THANK YOU FOR SIGNING UP</p>
     </div>
 </div>
 
 <div class="hero">
-    <div class="page-content clearfix">
-        <div class="mammoth">
-            <span class="need brandon">Shaving Is<br>Evolving</span>
-        </div>
-        <div class="share-wrap">
-            <p class="why brandon">Don't leave your friends behind</p>
-            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
-            <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-                <div class="sep"></div>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+    <div class="container center">
+        <p class="small dont-leave-friends">Don't leave your friends behind</p>
+        <h1 class="refer-large">INVITE FRIENDS &<br>Earn Screenings</h1>
+        <div class="subtitle-container">
+            <p class="subtitle left">Share your unique link via email, Facebook<br>or Twitter and earn screening minutes for<br>each friend who signs up.</p>
+        </div>        
+        <input type="text" class="copy-link left" value="<%= root_url %>?ref=<%= @user.referral_code %>" onclick="this.select()">
+        <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+        <% facebook_message = "Test Screener is launching" %>
+        <div class="row social-links">
+            <div class="six columns">
+                <div id="facebook-link">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(facebook_message) %>+<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" target="_blank"><img border="0" alt="Facebook" src="assets/refer/facebook.png" width="60" height="60"></a>
+                </div>
+            </div>
+            <div class="six columns">
+                <div id="twitter-link">
+                    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img border="0" alt="Twitter" src="assets/refer/twitter.png" width="60" height="60"></a>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -45,7 +50,7 @@
     <div class="page-content">
         <p class="callout brandon">Here's How It Works:</p>
         <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
+            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Test Screener Minutes</p></li>
             <% stops.each do |stop| %>
                 <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
                     <div class="circle"><%= stop["count"] %></div>
@@ -82,7 +87,5 @@
         <% end %>
         <p class="check brandon">Keep checking</p>
 
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
-        <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
     </div>
 </div>
