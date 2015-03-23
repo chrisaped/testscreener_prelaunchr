@@ -6,18 +6,18 @@
 
 <div class="hero">
     <div class="container center">
-        <p class="small dont-leave-friends">Don't leave your friends behind</p>
+        <p class="grey-small dont-leave-friends">Don't leave your friends behind</p>
         <h1 class="refer-large">INVITE FRIENDS &<br>Earn Screenings</h1>
         <div class="subtitle-container">
             <p class="subtitle left">Share your unique link via email, Facebook<br>or Twitter and earn screening minutes for<br>each friend who signs up.</p>
         </div>        
-        <input type="text" class="copy-link left" value="<%= root_url %>?ref=<%= @user.referral_code %>" onclick="this.select()">
-        <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+        <input type="text" class="copy-link left" value="<%= root_url %>?ref=<%= @user.referral_code %>" onclick="this.select()" style="border-radius: 0;">
+        <% twitter_message = "Online audience feedback screenings. Viewers get paid! Excited for @testscreener." %>
         <% facebook_message = "Test Screener is launching" %>
         <div class="row social-links">
             <div class="six columns">
                 <div id="facebook-link">
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(facebook_message) %>+<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" target="_blank"><img border="0" alt="Facebook" src="assets/refer/facebook.png" width="60" height="60"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" target="_blank"><img border="0" alt="Facebook" src="assets/refer/facebook.png" width="60" height="60"></a>
                 </div>
             </div>
             <div class="six columns">
@@ -57,9 +57,6 @@
                     <div class="sep"></div>
                     <p><%= stop["html"].html_safe %></p>
 
-                    <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254">
-                    </div>
                 </li>
             <% end %>
         </ul>
