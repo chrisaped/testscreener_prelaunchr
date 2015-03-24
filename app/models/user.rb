@@ -13,22 +13,22 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Clip/Trailer<br>5 minutes",
+            "html" => "<b>5 minutes</b><br>Clip, Trailer, Commercial",
             "class" => "two"
         },
         {
             'count' => 10,
-            "html" => "TV Episode<br>5 minutes",
+            "html" => "<b>10 minutes</b><br>Segment, Webisode",
             "class" => "three"
         },
         {
             'count' => 25,
-            "html" => "Short Film",
+            "html" => "<b>30 minutes</b><br>TV Episode, Short Film",
             "class" => "four"
         },
         {
             'count' => 50,
-            "html" => "Feature Film",
+            "html" => "<b>90 minutes</b><br>Feature Film, Documentary",
             "class" => "five"
         }
     ]
