@@ -14,18 +14,17 @@
         <input type="text" class="copy-link left" value="<%= root_url %>?ref=<%= @user.referral_code %>" onclick="this.select()" style="border-radius: 0;">
         <% twitter_message = "Online audience feedback screenings. Viewers get paid! Excited for @testscreener." %>
         <% facebook_message = "Test Screener is launching" %>
-        <div class="row social-links">
-            <div class="six columns">
-                <div id="facebook-link">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" target="_blank"><img border="0" alt="Facebook" src="assets/refer/facebook.png" width="60" height="60"></a>
-                </div>
-            </div>
-            <div class="six columns">
-                <div id="twitter-link">
+
+        <table class="center-margin social-table">
+            <tr>
+                <td>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" target  ="_blank"><img border="0" alt="Facebook" src="assets/refer/facebook.png" width="60" height="60"></a>
+                </td>
+                <td>
                     <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img border="0" alt="Twitter" src="assets/refer/twitter.png" width="60" height="60"></a>
-                </div>
-            </div>
-        </div>
+                </td>
+            </tr>
+        </table>
 
     </div>
 </div>
@@ -67,6 +66,10 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<div class="container">
         <% 
             words = ''
             if referrals_count == 1
@@ -78,11 +81,9 @@
         %>
 
         <% if referrals_count == 0 %>
-            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+            <p class="place"><span>No</span> friends have joined...Yet!</p>
         <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+            <p class="place"><span><%= referrals_count %></span> <%= words %> joined</p>
         <% end %>
-        <p class="check brandon">Keep checking</p>
-
-    </div>
+        <p class="check">Keep checking</p>
 </div>
