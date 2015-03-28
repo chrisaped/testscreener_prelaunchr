@@ -228,13 +228,18 @@ html.home{
 #home .form-wrap .email{
 	/*float: left;*/
 	font-size: 16px;
-	padding: 8px 0 8px 10px;
+	padding: 0;
+	padding-left: 10px;
 	border: 1px solid #074E6F;
 	width: 256px;
 	outline: none;
 	letter-spacing: 1px;
 	border-radius: 0px;
 	vertical-align: top;
+  display: inline-block;
+  height: 37px;	
+  line-height: 37px;
+
 }
 
 #home .form-wrap .submit{
@@ -242,13 +247,14 @@ html.home{
 	background: #074E6F;
 	/*float: left;*/
 	height: 37px;
-	line-height: 38px;
+	line-height: 37px;
 	color: #FAED6A;
 	font-weight: 400;
   font-size: 14px;
 	text-transform: uppercase;
 	border: 0;
 	letter-spacing: 2px;
+	display: inline-block;	
 }
 
 #home .form-wrap.ended{
