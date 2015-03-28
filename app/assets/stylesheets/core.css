@@ -22,7 +22,7 @@ body{
 
 .creator-container{
 	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .viewer-container{
@@ -102,11 +102,15 @@ form{
 }
 
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 
 .fa-ticket, .fa-desktop, .fa-pencil{
 	color:#074E6F;
+}
+
+.fa-usd:before, .fa-desktop:before, .fa-pencil:before{
+	font-size: 70px;
 }
 
 .fa-usd{

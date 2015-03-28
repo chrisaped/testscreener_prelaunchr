@@ -136,6 +136,65 @@
 
 }
 
+@media (max-width: 1083px) {
+  .large{
+    font-size: 50px;
+  }
+
+  .small{
+    font-size: 18px;
+  }
+
+  .brand-logo{
+    height: 25px;
+  }
+
+  .fa-usd:before, .fa-desktop:before, .fa-pencil:before{
+    font-size: 50px;
+  }  
+}
+
+@media (max-width: 943px) {
+  .six.columns {
+    width: 100%;
+    margin:0;
+  }  
+
+  .get-more-views{
+    margin-top: 20px;
+  }
+
+  .logo-table{
+    margin-bottom: -20px;
+  }
+
+  .viewer-container{
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .icon-table{
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 907px) {
+  .large{
+    font-size: 45px;
+  }
+
+}
+
+@media (max-width: 456px) {
+  .large{
+    font-size: 38px;
+  }
+
+  .small{
+    font-size: 16px;
+  }
+}
+
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
