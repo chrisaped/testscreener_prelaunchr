@@ -234,6 +234,7 @@ html.home{
 	outline: none;
 	letter-spacing: 1px;
 	border-radius: 0px;
+	vertical-align: top;
 }
 
 #home .form-wrap .submit{
@@ -243,7 +244,7 @@ html.home{
 	height: 37px;
 	line-height: 38px;
 	color: #FAED6A;
-	font-weight: 100;
+	font-weight: 400;
   font-size: 14px;
 	text-transform: uppercase;
 	border: 0;
