@@ -33,6 +33,8 @@ gem 'unicorn'
 gem 'faker'
 gem 'populator'
 gem "workless", "~> 1.1.3"
+gem 'daemons'
+gem 'mail_view', :git => 'https://github.com/basecamp/mail_view.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

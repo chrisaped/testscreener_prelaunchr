@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/basecamp/mail_view.git
+  revision: 50831ad31c6f9042469a33dab1394bd2a4042fd8
+  specs:
+    mail_view (2.0.4)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +63,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    daemons (1.1.9)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
     delayed_job_active_record (0.4.4)
@@ -183,8 +191,10 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.2.1)
+  daemons
   delayed_job_active_record
   faker
+  mail_view!
   pg
   populator
   pry
