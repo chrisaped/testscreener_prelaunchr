@@ -112,17 +112,21 @@
 
 }
 
+.check{
+  display:none;
+}
+
 @media (min-width: 1121px) {
-  .check{
+/*  .check{
     display:none;
-  }
+  }*/
 }
 
 @media (max-width: 1120px) {
 
-  div.prizes{
+/*  div.prizes{
     display:none;
-  }
+  }*/
 
   #refer p.place{
     margin-top: 30px;
