@@ -112,6 +112,12 @@
 
 }
 
+@media (min-width: 1121px) {
+  .check{
+    display:none;
+  }
+}
+
 @media (max-width: 1120px) {
 
   div.prizes{
@@ -124,15 +130,15 @@
 
 }
 
-@media (max-width: 554px) {
+@media (max-width: 658px) {
+
+  .grey-small{
+    font-size: 18px;
+  }
 
   .refer-large{
     font-size: 32px;
-  }
-
-  .grey-small{
-    font-size: 16px;
-  }
+  }  
 
 }
 
@@ -183,6 +189,12 @@
     font-size: 45px;
   }
 
+}
+
+@media (max-width: 515px) {
+  .refer-large{
+    font-size: 26px;
+  } 
 }
 
 @media (max-width: 456px) {
