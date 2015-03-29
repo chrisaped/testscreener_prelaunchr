@@ -58,7 +58,7 @@ class UsersController < ApplicationController
                 cookies[:h_email] = { :value => @user.email }
                 format.html { redirect_to '/refer-a-friend' }
             else
-                format.html { redirect_to root_path, :alert => "Something went wrong!" }
+                format.html { redirect_to root_path, :alert => "Invalid email address" }
             end
         end
     end
@@ -75,7 +75,7 @@ class UsersController < ApplicationController
             if !@user.nil?
                 format.html #refer.html.erb
             else
-                format.html { redirect_to root_path, :alert => "Something went wrong!" }
+                format.html { redirect_to root_path, :alert => "Invalid email address" }
             end
         end
     end
