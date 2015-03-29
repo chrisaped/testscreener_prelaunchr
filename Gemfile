@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'pry'
+  gem 'mail_view', :git => 'https://github.com/basecamp/mail_view.git'  
 end
 
 gem 'delayed_job_active_record'
@@ -34,7 +35,7 @@ gem 'faker'
 gem 'populator'
 gem "workless", "~> 1.1.3"
 gem 'daemons'
-gem 'mail_view', :git => 'https://github.com/basecamp/mail_view.git'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
