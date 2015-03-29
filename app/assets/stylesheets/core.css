@@ -745,25 +745,6 @@ html.home{
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-	#home .hero{
-		background: url(/assets/home/hero@2x.jpg) center center no-repeat;
-		background-size: 1600px 446px;
-	}
-
-	#home .form-wrap .key{
-		background: url(/assets/home/key@2x.png) 0 0 no-repeat;
-		background-size: 46px 19px;
-	}
-
-	.header .logo{
-		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
-		background-size: 106px 19px;
-	}
-
-	#refer .mammoth{
-		background: url(/assets/refer/mammoth@2x.png) 0 0 no-repeat;
-		background-size: 610px 394px;
-	}
 
 	#refer .share-wrap .social-links .fb{
 		background: url(/assets/refer/fb@2x.png);
