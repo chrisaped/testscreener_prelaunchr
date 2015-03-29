@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
     def signup_email(user)
         @user = user
         @path = "#{root_url}"
-        @twitter_message = "Online audience feedback screenings for film, tv & video. Viewers get paid! Excited for @testscreener."
+        @twitter_message = "Online audience feedback screenings for film, tv & video. Viewers get paid! @testscreener"
         mail(:to => user.email, :subject => "Thanks for signing up!")
     end
 end

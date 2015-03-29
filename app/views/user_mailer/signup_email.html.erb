@@ -8,12 +8,12 @@
     <tr>
         <td width="80">
             <a href="http://www.facebook.com/sharer/sharer.php?u=<%= @path %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" style="outline: 0; border: 0;" target="_blank">
-                <img src="/facebook.png" alt="Share on Facebook" style="display: block; margin: 0; padding: 0; border: 0;" width="60" height="60">
+                <img src="<%= @path %>/assets/refer/facebook.png" alt="Share on Facebook" style="display: block; margin: 0; padding: 0; border: 0;" width="60" height="60">
             </a>
         </td>
         <td width="80">
             <a href="http://twitter.com/share?url=<%= @path %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(@twitter_message) %>" style="outline: 0; border: 0;" target="_blank">
-                <img src="/twitter.png" alt="Share on Twitter" style="display: block; margin: 0; padding: 0; border: 0;" width="60" height="60">
+                <img src="<%= @path %>/assets/refer/twitter.png" alt="Share on Twitter" style="display: block; margin: 0; padding: 0; border: 0;" width="60" height="60">
             </a>
         </td>
     </tr>
